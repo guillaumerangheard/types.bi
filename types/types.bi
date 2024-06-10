@@ -4,9 +4,13 @@
     #include "macros/macros.bi"
     namespace types
         
+        const as integer versionMajor => 0%, _
+                         versionMinor => 2%
+        const as string  versionString => "types v" & versionMajor & "." & versionMinor
+        
 ' types.int8 -------------------------------------------------------------------
         
-        type int8 as short
+        type int8 as byte
         #define t_ci8 cbyte
         type i8p as int8 ptr
         #define t_ci8p(_a_) cptr(i8p,_a_)
@@ -19,7 +23,7 @@
         
 ' types.uint8 ------------------------------------------------------------------
         
-        type uint8 as ushort
+        type uint8 as ubyte
         #define t_cui8 cubyte
         type ui8p as uint8 ptr
         #define t_cui8p(_a_) cptr(ui8p,_a_)

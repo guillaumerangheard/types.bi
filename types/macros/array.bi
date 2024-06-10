@@ -15,7 +15,7 @@ type _a_##array extends baseArray
         declare       operator let  (byref as const _a_##array)
         
         declare const property avg    () as double
-        declare       operator data   () as _t_ const ptr
+        declare       property data   () as _t_ const ptr
         declare       property length (byref as const integer)
         declare const property max    () as _t_
         declare const property min    () as _t_
