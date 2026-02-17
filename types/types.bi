@@ -1,4 +1,66 @@
 #ifndef _TYPES_BI_
+    
+    #define _TYPES_BI_
+    
+    #define TYPES_VERSION_MAJOR 26
+    #define TYPES_VERSION_MINOR 1
+    const as string t_version => "Types v" & TYPES_VERSION_MAJOR & "." & TYPES_VERSION_MINOR
+    
+    type    t_i8         as byte
+    #define t_ci8        cbyte
+    type    t_i8p        as byte ptr
+    #define t_ci8p(_a_)  cptr(byte ptr, _a_)
+    
+    type    t_u8         as ubyte
+    #define t_cu8        cubyte
+    type    t_u8p        as ubyte ptr
+    #define t_cu8p(_a_)  cptr(ubyte ptr, _a_)
+    
+    type    t_i16        as short
+    #define t_ci16       cshort
+    type    t_i16p       as short ptr
+    #define t_ci16p(_a_) cptr(short ptr, _a_)
+    
+    type    t_u16        as ushort
+    #define t_cu16       cushort
+    type    t_u16p       as ushort ptr
+    #define t_cu16p(_a_) cptr(ushort ptr, _a_)
+    
+    type    t_i32        as long
+    #define t_ci32       clng
+    type    t_i32p       as long ptr
+    #define t_ci32p(_a_) cptr(long ptr, _a_)
+    
+    type    t_u32        as ulong
+    #define t_cu32       culng
+    type    t_u32p       as ulong ptr
+    #define t_cu32p(_a_) cptr(ulong ptr, _a_)
+    
+    type    t_i64        as longint
+    #define t_ci64       clngint
+    type    t_i64p       as longint ptr
+    #define t_ci64p(_a_) cptr(longint ptr, _a_)
+    
+    type    t_u64        as ulongint
+    #define t_cu64       culngint
+    type    t_u64p       as ulongint ptr
+    #define t_cu64p(_a_) cptr(ulongint ptr, _a_)
+    
+    type    t_f32        as single
+    #define tcf32        csng
+    type    t_f32p       as single ptr
+    #define t_cf32p(_a_) cptr(single ptr, _a_)
+    
+    type    t_f64        as double
+    #define t_cf64       cdbl
+    type    t_f64p       as double ptr
+    #define t_cf64p(_a_) cptr(double ptr, _a_)
+    
+    #include "vectors.bi"
+    
+#endif
+
+#ifndef _TYPES_BI_
     #define _TYPES_BI_
     #include "types.cfg"
     #include "macros/macros.bi"
