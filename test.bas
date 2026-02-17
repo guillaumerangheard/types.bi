@@ -1,7 +1,9 @@
 #include "types/types.bi"
 
-using types
+print "Done compiling " & t_version & !".\n"
 
-print "Done compiling " & versionString & "."
+t_defineArray(f32)
+dim as t_f32array a => type(11)
+print a.toJSON
 
 sleep
