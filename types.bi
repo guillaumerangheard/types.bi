@@ -58,6 +58,41 @@
     type    t_f64p       as double ptr
     #define t_cf64p(_a_) cptr(double ptr, _a_)
     
+    union t_t8
+        as t_i8 i8
+        as t_u8 u8
+    end union
+    
+    union t_t16
+        type : as t_i8 i8a, i8b : end type
+        type : as t_u8 u8a, u8b : end type
+        as t_i16 i16
+        as t_u16 u16
+    end union
+    
+    union t_t32
+        type : as t_i8  i8a, i8b, i8c, i8d : end type
+        type : as t_u8  u8a, u8b, u8c, u8d : end type
+        type : as t_i16 i16a    , i16b     : end type
+        type : as t_u16 u16a    , u16b     : end type
+        as t_i32 i32
+        as t_u32 u32
+        as t_f32 f32
+    end union
+    
+    union t_t64
+        type : as t_i8  i8a, i8b, i8c, i8d, i8e, i8f, i8g, i8h : end type
+        type : as t_u8  u8a, u8b, u8c, u8d, u8e, u8f, u8g, u8h : end type
+        type : as t_i16 i16a    , i16b    , i16c    , i16d     : end type
+        type : as t_u16 u16a    , u16b    , u16c    , u16d     : end type
+        type : as t_i32 i32a              , i32b               : end type
+        type : as t_u32 u32a              , u32b               : end type
+        type : as t_f32 f32a              , f32b               : end type
+        as t_i64 i64
+        as t_u64 u64
+        as t_f64 f64
+    end union
+    
     #macro t_defineVectors(_a_)
         #ifndef t_##_a_##vec2
         union t_##_a_##vec2
